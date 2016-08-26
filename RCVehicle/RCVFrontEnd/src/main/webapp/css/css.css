@@ -1,0 +1,104 @@
+.body {
+	background: #eee;
+}
+
+.container-fluid {
+	margin-top: 10px;
+}
+
+.grid-div {
+	width: 100px;
+	height: 100px;
+	margin-left: 5px;
+}
+
+.body-div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.dropdown {
+	margin-left: 5px;
+}
+
+.map {
+	width: 97%;
+	height: 60%;
+	margin-left: 20px;
+	margin-bottom: 20px; position : relative;
+	overflow: auto !important;
+	background: white;
+	border-style: outset;
+	position: relative;
+}
+
+.console-div {
+	width: 97%;
+	height: 20%;
+	margin-left: 20px;
+	position: relative;
+	border-style: outset;
+	background: white;
+	background-color: black;
+}
+
+nav ul li:hover>ul {
+	display: block;
+}
+
+.square {
+	width: 50px;
+	height: 30px;
+	margin-right: 5px;
+	margin-top: 5px;
+	background: #AFEEEE;
+	border-style: solid;
+	border-color: #C9C9C9;
+	padding-left: 18px;
+	padding-top: 2px;
+}
+
+.map-draw {
+	bottom: 0%;
+	position: relative;
+	overflow: auto !important;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.txtConsole {
+	width: 100%;
+	height: 70%;
+	position: absolute;
+	background-color: black;
+	color: green;
+	border: none;
+	outline: 0px;
+}
+
+.txtConsoleInput {
+	top: 75%;
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	background-color: black;
+	color: green;
+	border: none;
+	outline: 0px;
+}
+
+*::-webkit-input-placeholder { / Google Chrome y Safari / color:green;
+	
+}
+
+*:-moz-placeholder { / Firefox anterior a 19 / color:green;
+	
+}
+
+*::-moz-placeholder { / Firefox 19 y superior / color:green;
+	
+}
+
+*:-ms-input-placeholder { / Internet Explorer 10 y superior / color:green;
+	
+}

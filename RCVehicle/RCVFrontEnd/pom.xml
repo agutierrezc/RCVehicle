@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>co.com.certicamara</groupId>
+		<artifactId>RCVehicle</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>RCVFrontEnd</artifactId>
+	<packaging>war</packaging>
+	<name>RCVFrontEnd Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>RCVFrontEnd</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.4.5</version>
+				<configuration>
+					<container>
+						<containerId>tomcat7x</containerId>
+						<home>${env.CATALINA_HOME}</home>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>${env.CATALINA_HOME}</home>
+					</configuration>
+					<deployer>
+						<type>installed</type>
+					</deployer>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
