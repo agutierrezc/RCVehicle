@@ -33,15 +33,19 @@ public class RCVehicleServiceImpl implements RCVehicleService{
 		}
 		map.setAxisY(n);
 		map.setAxisX(m);
+		System.out.println("hola");
 	}
 
 	public void moveVehicle(String... commands) throws BusinessException {
 		Point newPosition = null;
+		System.out.println("hola");
 		for (String command : commands) {
 			isValidCommand(command);
 			newPosition = transformCommandToPoint(vehicle.getPosition(), command);
 			newPosition = vehicle.moveVehicle(newPosition);
 		}
+		System.out.println("hola");
+		System.out.println("hola");
 		//dsfsdffe
 	}
 
@@ -52,6 +56,7 @@ public class RCVehicleServiceImpl implements RCVehicleService{
 	 * @throws Exception
 	 */
 	private void isValidCommand(String command) throws BusinessException {
+		System.out.println("hola");
 		if (command.isEmpty())
 			throw new BusinessException(invalidCommnands);
 		if (!command.matches("[0-9]*,[NSOE]"))
@@ -70,7 +75,7 @@ public class RCVehicleServiceImpl implements RCVehicleService{
 		// Si es S se tiene que mover en el eje Y de forma negativa
 		// Si es E se tiene que mover en el eje X de forma positiva
 		// Si es O se tiene que mover en el eje X de forma negativa
-
+		System.out.println("hola");
 		String[] splitCommand = command.split(",");
 		int steps = Integer.parseInt(splitCommand[0]);
 		String dir = splitCommand[1];
@@ -85,6 +90,7 @@ public class RCVehicleServiceImpl implements RCVehicleService{
 		else if (dir.equals("O"))
 			newPoint.x -= steps;
 
+		System.out.println("hola");
 		return newPoint;
 	}
 
