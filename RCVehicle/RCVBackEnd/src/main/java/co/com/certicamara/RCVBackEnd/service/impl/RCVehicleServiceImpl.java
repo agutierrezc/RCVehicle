@@ -42,6 +42,7 @@ public class RCVehicleServiceImpl implements RCVehicleService{
 			newPosition = transformCommandToPoint(vehicle.getPosition(), command);
 			newPosition = vehicle.moveVehicle(newPosition);
 		}
+		//dsfsdffe
 	}
 
 	/**
